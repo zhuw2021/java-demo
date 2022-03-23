@@ -1,0 +1,10 @@
+version: 1.0
+runtime: corretto11
+build:
+  commands:    
+    build:
+      - mvn clean package
+run:                              
+  command: java -jar target/pcfegress-0.0.1-SNAPSHOT.jar -Xms256m .
+  network:
+    port: 8080
