@@ -17,12 +17,14 @@ public class CurlConnectionController {
 	@GetMapping("/")
 	public String getUsage(){
 		
+		String title1 = "This is a sample app to issue curl requests with option: -v, -I, -x and -k to test the outbound traffic from the app.";
+		String title2 = "Specify the option with the URL as the following:";
 		String usage1 = "/curl-v?url=";
 		String usage2 = "/curl-I?url=";
 		String usage3 = "/curl-x?url=";
 		String usage4 = "/curl-k?url=";
 		
-		String usage = "<br><h1>" + usage1 + "<br>" + usage2 + "<br>" + usage3 + "<br>" + usage4+  "</h1>";
+		String usage = "<br><h1>" + title1 + "<br>"+ title2 + "<br>"+ "<br>"+usage1 + "<br>" + usage2 + "<br>" + usage3 + "<br>" + usage4+  "</h1>";
 		
 		return usage;
 	}
